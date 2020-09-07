@@ -1,0 +1,394 @@
+html {
+    font-family: 'Open Sans', sans-serif;
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    overflow-x: hidden;
+}
+
+h1 {
+    font-weight:300;
+    text-align:center;
+}
+
+#intro-wrapper {
+    opacity:0;
+    transition: opacity 2000ms linear;
+    width:99vw;
+    height:99vh;
+    color:white;
+    display:flex;
+    justify-content:center;
+    position:absolute;
+    align-items:center;
+    
+    
+}
+
+
+
+
+
+
+
+
+#intro {
+    width:30%;
+}
+
+#personal-wrapper {
+    color:white;
+    transition: opacity 1000ms linear;
+    width:99vw;
+    height:99vh;
+    position:absolute;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:-3;
+}
+#personal {
+    width:30%;
+}
+
+#professional-wrapper {
+    color:white;
+    transition: opacity 1000ms linear;
+    width:99vw;
+    height:99vh;
+    position:absolute;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:-4;
+}
+
+#professional {
+    width:30%;
+}
+
+#hobbies-wrapper {
+    color:white;
+    transition: opacity 1000ms linear;
+    width:99vw;
+    height:99vh;
+    position:absolute;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:-5;
+}
+#hobbies {
+    width:30%;
+}
+
+
+#welcome-button {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    color:white;
+    background-color: #0F2027;
+    border:none;
+    padding: 10px 33px;
+    border-radius:15px;
+    cursor:pointer;
+    transition: all .2s ease-in;
+}
+#welcome-button:hover {
+    background-color:#2C5364;
+}
+
+#welcome-wrapper {
+    opacity:1;
+    transition: opacity 1000ms linear;
+
+    color:white;
+    font-size:3em;
+    font-weight:300;
+    position:absolute;
+    width:99vw;
+    height:99vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    animation: 2s ease-out 0s 1 fadeIn;
+}
+.fadeInAnimation {
+    animation: fadeIn 2s ease-out 0s 1 ;
+}
+
+
+
+
+
+
+
+/* START FLOATING ANIMATION */
+.sliderRight {
+    animation: sidefloatRight 4s ease-in-out 1s infinite;
+    margin-top: 5vh;
+    width: 5vw;
+    height: 6vh;
+}
+
+.sliderLeft {
+    animation: sidefloatLeft 4s ease-in-out 1s infinite;
+    margin-top: 5vh;
+    width: 5vw;
+    height: 6vh;
+}
+
+@keyframes sidefloatRight {
+    0% {
+        transform:translateX(0%)
+    }
+    
+    50% {
+        transform:translateX(29%)
+    }
+    15% {
+        transform:translateX(0%)
+    }
+}
+
+@keyframes sidefloatLeft {
+    0% {
+        transform:translateX(-0%)
+    }
+    
+    50% {
+        transform:translateX(-29%)
+    }
+    15% {
+        transform:translateX(-10%)
+    }
+}
+/* END FLOATING ANIMATION */
+
+
+
+
+
+
+
+
+
+/* START ANIMATIONS FOR GOING FORWARD WITH CONTENT */
+    /* This moves wrapper from off screen to the center (from the right) */
+.slideLeftFromRight {
+    animation: slideFromRight .66s ease-in-out 0s 1;
+}
+    /* Slides content from the middle to the left off screen */
+.slideLeftAnimation {
+    animation: slideLeft .66s ease-in-out 0s 1;
+}
+
+@keyframes slideFromRight {
+    0% {
+        transform:translateX(100%)
+    }
+    100% {
+        transform:translateX(0%)
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform:translateX(0%)
+    }
+    100% {
+        transform:translateX(-100%)
+    }
+}
+/* END ANIMATIONS FOR GOING FORWARD WITH CONTENT */
+
+
+
+
+/* START ANIMATIONS FOR GOING BACKWARDS WITH CONTENT */
+    /* This moves wrapper onto screen from the left to center */
+.slideRightFromLeft {
+    animation: slideFromLeft .66s ease-in-out 0s 1;
+}
+
+.slideRightAnimation {
+    animation: slideRight .66s ease-in-out 0s 1;
+}
+
+@keyframes slideFromLeft {
+    0% {
+        transform:translateX(-100%)
+    }
+    100% {
+        transform:translateX(0%)
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform:translateX(0%)
+    }
+    100% {
+        transform:translateX(100%)
+    }
+}
+
+
+
+/* END ANIMATIONS FOR GOING BACKWARDS WITH CONTENT */
+
+
+
+
+/* TON OF CSS FOR BUTTON */
+
+.bubbly-button {
+  display: inline-block;
+  font-size: 1vw;
+  padding: 1em 2em;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #102128;
+  color: white;
+  border-radius: 2%;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px rgba(17, 33, 40, 0.5);
+}
+.bubbly-button:focus {
+  outline: 0;
+}
+.bubbly-button:before, .bubbly-button:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #102128 20%, transparent 20%), radial-gradient(circle, transparent 20%, #102128 20%, transparent 30%), radial-gradient(circle, #102128 20%, transparent 20%), radial-gradient(circle, #102128 20%, transparent 20%), radial-gradient(circle, transparent 10%, #102128 15%, transparent 20%), radial-gradient(circle, #102128 20%, transparent 20%), radial-gradient(circle, #102128 20%, transparent 20%), radial-gradient(circle, #102128 20%, transparent 20%), radial-gradient(circle, #102128 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #102128 20%, transparent 20%), radial-gradient(circle, #102128 20%, transparent 20%), radial-gradient(circle, transparent 10%, #102128 15%, transparent 20%), radial-gradient(circle, #102128 20%, transparent 20%), radial-gradient(circle, #102128 20%, transparent 20%), radial-gradient(circle, #102128 20%, transparent 20%), radial-gradient(circle, #102128 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button:active {
+  transform: scale(0.9);
+  background-color: #102128;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+.bubbly-button.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+@keyframes topBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+  }
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+@keyframes bottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+  }
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+
+
+
+#time-thing-wrapper {
+    
+    opacity:1;
+    justify-content: center;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    width: 99vw;
+    height: 99vh;
+
+}
+
+#time-thing {
+    transition: opacity 1000ms linear;
+    opacity:1;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 99vw;
+    height: 99vh;
+    animation: 2s ease-out 0s 1 fadeIn;
+}
+
+
+
+
+
+#map {
+    position:absolute;
+    z-index: 5;
+    animation: 2s ease-out 0s 1 fadeIn;
+    height: 50%;
+    width: 50%;
+    opacity:0;
+    transition: opacity 2000ms linear;
+}
+
+.blurtime {
+    animation: blur 3s ease-in-out 0s 1 forwards;
+}
+
+@keyframes blur {
+    0% {
+        filter: blur(15px);
+    }
+    100% {
+        filter: blur(0px);
+    }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  30% {
+      opacity:0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+

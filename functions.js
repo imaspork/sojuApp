@@ -207,16 +207,17 @@ document.querySelector('#button-project').addEventListener('click', function(e) 
 // get geolocation
 const key = "AIzaSyBGzkyY05335UxV-zAgXhldt7LrPMEg164"; // put in another file later on
 
-var clientLatitude;
-var clientLongitude;
 
 document.querySelector('#location-button').addEventListener('click', function(){
     function clientPosition(pos) {
-        var crd = pos.coords;
+        localStorage.clear();
 
-        var clientLatitude = crd.latitude
-        var clientLongitude = crd.longitude
-        console.log(`Your latitude is ${clientLatitude} and your longitude is ${clientLongitude}`)
+        let crd = pos.coords;
+
+        localStorage.setItem('clientLat', JSON.stringify(crd.latitude));
+        localStorage.setItem('clientLon', JSON.stringify(crd.longitude));
+
+        console.log(`Your latitude is ${crd.latitude} and your longitude is ${crd.longitude}`)
     }
 
     function error(err) {
@@ -224,14 +225,14 @@ document.querySelector('#location-button').addEventListener('click', function(){
     }
 
     navigator.geolocation.getCurrentPosition(clientPosition, error);
-
-    console.log(clientLongitude, clientLatitude)
-
+    
 })
 
 
 document.querySelector('#find-button').addEventListener('click', function () {
 
+    var clientLatitude = localStorage.getItem('clientLat');
+    var clientLongitude = localStorage.getItem('clientLon')
 
     let url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${clientLatitude},${clientLongitude}&key=${key}`
     fetch(url)

@@ -7,6 +7,8 @@ let infowindow;
 
 
 function initMap() {
+    var clientLatitude = localStorage.getItem('clientLat');
+    var clientLongitude = localStorage.getItem('clientLon');
     const clientLocation = new google.maps.LatLng(clientLatitude, clientLongitude);
     infowindow = new google.maps.InfoWindow();
     map = new google.maps.Map(document.getElementById("map"), {

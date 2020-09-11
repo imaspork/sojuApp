@@ -1,4 +1,3 @@
-
 // defined vars for shorthand
 var welcomeWrapper = document.querySelector('#welcome-wrapper')
 var introWrapper = document.querySelector('#intro-wrapper')
@@ -23,135 +22,99 @@ document.querySelector('#welcome-button').addEventListener('click', function(e) 
     }, 1000);
 })
 
-
-
-
-
-
-
-
 // Intro message removal and personal content load
-
 document.querySelector('#img-wrapper-intro-right').addEventListener('click',function(e){
     introWrapper.classList.remove("fadeInAnimation")
     // personal wrapper and intro wrapper class additions
-    desiredElement = '#personal-wrapper'
+    let desiredElement = document.querySelector('#personal-wrapper')
     introWrapper.classList.add("slideLeftAnimation");
-    document.querySelector(desiredElement).style.display = "flex";
+    desiredElement.style.display = "flex";
     
-    if (document.querySelector(desiredElement).style.display === "none") {
-        document.querySelector(desiredElement).style.display = "flex";
+    if (desiredElement.style.display === "none") {
+        desiredElement.style.display = "flex";
 
         introWrapper.classList.add("slideLeftAnimation")
     } else {
         console.log("Style is not changed!")
     }
-
-
-
+    // Remove element after off screen animation
     setTimeout(function () {
-        document.querySelector(desiredElement).classList.remove('slideRightFromLeft')
+        desiredElement.classList.remove('slideRightFromLeft')
         introWrapper.classList.remove("slideLeftAnimation");
         introWrapper.style.display = "none";
-        
-        
     }, 630);
 
     personalWrapper.classList.add("slideLeftFromRight");
 })
-
 // personal to professional content
-
 document.querySelector('#img-wrapper-personal-right').addEventListener('click', function(e) {
-    desiredElement = '#professional-wrapper'
+    let desiredElement = document.querySelector('#professional-wrapper')
     personalWrapper.classList.add("slideLeftAnimation")
-    document.querySelector(desiredElement).style.display = "flex";
+    desiredElement.style.display = "flex";
 
-    if (document.querySelector(desiredElement).style.display === "none") {
-        document.querySelector(desiredElement).style.display = "flex";
-
+    if (desiredElement.style.display === "none") {
+        desiredElement.style.display = "flex";
         personalWrapper.classList.add("slideLeftAnimation")
     } else {
         console.log("Style is not changed!")
     }
-
-
-
-
-
+    // Remove element after off screen animation
     setTimeout(function () {
         personalWrapper.style.display = "none";
-        document.querySelector(desiredElement).classList.remove('slideRightFromLeft')
+        desiredElement.classList.remove('slideRightFromLeft')
         personalWrapper.classList.remove("slideLeftFromRight");
     }, 630);
     professionalWrapper.classList.add("slideLeftFromRight");
 })
-
 // professional to hobbies content
-
 document.querySelector('#img-wrapper-professional-right').addEventListener('click', function(e) {
-    desiredElement = '#hobbies-wrapper'
+    let desiredElement = document.querySelector('#hobbies-wrapper')
     professionalWrapper.classList.add('slideLeftAnimation')
-    document.querySelector(desiredElement).style.display = "flex";
+    desiredElement.style.display = "flex";
     
-
-    
-    if (document.querySelector(desiredElement).style.display === "none") {
-        document.querySelector(desiredElement).style.display = "flex";
-        
+    if (desiredElement.style.display === "none") {
+        desiredElement.style.display = "flex";
         professionalWrapper.classList.add("slideLeftAnimation")
     } else {
         console.log("Style is not changed!")
     }
-
+    // Remove element after off screen animation
     setTimeout(function () {
         // Styling and class adding to slide element to the left to remove it
-        document.querySelector(desiredElement).classList.remove('slideRightFromLeft')
+        desiredElement.classList.remove('slideRightFromLeft')
         professionalWrapper.classList.remove("slideLeftFromRight")
         professionalWrapper.style.display = "none";
     }, 630);
     hobbiesWrapper.classList.add("slideLeftFromRight");
 })
-
-
-
 // functions for going backward
-
-
-
-
-
-
 document.querySelector('#img-wrapper-hobbies-left').addEventListener('click', function(e) {
-    desiredElement = '#professional-wrapper' // desired element is the element to the left of the current element
+    let desiredElement = document.querySelector('#professional-wrapper') // desired element is the element to the left of the current element
     
-    if (document.querySelector(desiredElement).style.display === "none") {
-        document.querySelector(desiredElement).style.display = "flex";
-        document.querySelector(desiredElement).classList.remove('slideLeftAnimation')
-        document.querySelector(desiredElement).classList.add('slideRightFromLeft')
+    if (desiredElement.style.display === "none") {
+        desiredElement.style.display = "flex";
+        desiredElement.classList.remove('slideLeftAnimation')
+        desiredElement.classList.add('slideRightFromLeft')
         // Item to the right of the desired element
-        document.querySelector('#hobbies-wrapper').classList.add('slideRightAnimation')
-        
+        hobbiesWrapper.classList.add('slideRightAnimation')
     } else {
         console.log("Style is not changed!")
     }
-
     setTimeout(function () {
-        document.querySelector(desiredElement).classList.remove('slideRightFromLeft')
+        desiredElement.classList.remove('slideRightFromLeft')
         // Items to the right of the desired element
-        document.querySelector('#hobbies-wrapper').classList.remove('slideRightAnimation')
-        document.querySelector('#hobbies-wrapper').style.display = "none";
+        hobbiesWrapper.classList.remove('slideRightAnimation')
+        hobbiesWrapper.style.display = "none";
     }, 630);
 })
 
-
 document.querySelector('#img-wrapper-professional-left').addEventListener('click', function (e) {
-    desiredElement = '#personal-wrapper' // desired element is the element to the left of the current element
+    let desiredElement = document.querySelector('#personal-wrapper') // desired element is the element to the left of the current element
 
-    if (document.querySelector(desiredElement).style.display === "none") {
-        document.querySelector(desiredElement).style.display = "flex";
-        document.querySelector(desiredElement).classList.remove('slideLeftAnimation')
-        document.querySelector(desiredElement).classList.add('slideRightFromLeft')
+    if (desiredElement.style.display === "none") {
+        desiredElement.style.display = "flex";
+        desiredElement.classList.remove('slideLeftAnimation')
+        desiredElement.classList.add('slideRightFromLeft')
         // Item to the right of the desired element
         document.querySelector('#professional-wrapper').classList.add('slideRightAnimation')
 
@@ -160,38 +123,35 @@ document.querySelector('#img-wrapper-professional-left').addEventListener('click
     }
 
     setTimeout(function () {
-        document.querySelector(desiredElement).classList.remove('slideRightFromLeft')
+        desiredElement.classList.remove('slideRightFromLeft')
         // Items to the right of the desired element
-        document.querySelector('#professional-wrapper').classList.remove('slideRightAnimation')
-        document.querySelector('#professional-wrapper').style.display = "none";
+        professionalWrapper.classList.remove('slideRightAnimation')
+        professionalWrapper.style.display = "none";
     }, 630);
 })
 
 document.querySelector('#img-wrapper-personal-left').addEventListener('click', function (e) {
-    desiredElement = '#intro-wrapper' // desired element is the element to the left of the current element
-    
-    if (document.querySelector(desiredElement).style.display === "none") {
-        document.querySelector(desiredElement).style.display = "flex";
-        document.querySelector(desiredElement).classList.remove('slideLeftAnimation')
-        document.querySelector(desiredElement).classList.add('slideRightFromLeft')
+    let desiredElement = document.querySelector('#intro-wrapper') // desired element is the element to the left of the current element
+    if (desiredElement.style.display === "none") {
+        desiredElement.style.display = "flex";
+        desiredElement.classList.remove('slideLeftAnimation')
+        desiredElement.classList.add('slideRightFromLeft')
         // Item to the right of the desired element
-        document.querySelector('#personal-wrapper').classList.add('slideRightAnimation')
+        personalWrapper.classList.add('slideRightAnimation')
 
     } else {
         console.log("Style is not changed!")
     }
-
     setTimeout(function () {
-        document.querySelector(desiredElement).classList.remove('slideRightFromLeft')
+        desiredElement.classList.remove('slideRightFromLeft')
         // Items to the right of the desired element
-        document.querySelector('#personal-wrapper').classList.remove('slideRightAnimation')
-        document.querySelector('#personal-wrapper').style.display = "none";
+        personalWrapper.classList.remove('slideRightAnimation')
+        personalWrapper.style.display = "none";
     }, 630);
 })
 
-
 document.querySelector('#button-project').addEventListener('click', function(e) {
-    document.querySelector('#hobbies-wrapper').style.opacity = '0'
+    hobbiesWrapper.style.opacity = '0'
     
     setTimeout(function () {
         hobbiesWrapper.style.display = "none";
@@ -209,7 +169,7 @@ const key = "AIzaSyBGzkyY05335UxV-zAgXhldt7LrPMEg164"; // put in another file la
 
 
 document.querySelector('#location-button').addEventListener('click', function(){
-    function clientPosition(pos) {
+    let clientPosition = function(pos) {
         localStorage.clear();
 
         let crd = pos.coords;
@@ -231,8 +191,8 @@ document.querySelector('#location-button').addEventListener('click', function(){
 
 document.querySelector('#find-button').addEventListener('click', function () {
 
-    var clientLatitude = localStorage.getItem('clientLat');
-    var clientLongitude = localStorage.getItem('clientLon')
+    let clientLatitude = localStorage.getItem('clientLat');
+    let clientLongitude = localStorage.getItem('clientLon')
 
     let url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${clientLatitude},${clientLongitude}&key=${key}`
     fetch(url)
@@ -280,8 +240,3 @@ var bubblyButtons = document.getElementsByClassName("bubbly-button");
 for (var i = 0; i < bubblyButtons.length; i++) {
     bubblyButtons[i].addEventListener('click', animateButton, false);
 }
-
-
-
-
-

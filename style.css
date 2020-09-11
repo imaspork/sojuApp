@@ -13,6 +13,38 @@ h1 {
     text-align:center;
 }
 
+#welcome-wrapper {
+    opacity:1;
+    transition: opacity 1000ms linear;
+
+    color:white;
+    font-size:3em;
+    font-weight:300;
+    position:absolute;
+    width:99vw;
+    height:99vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    animation: 2s ease-out 0s 1 fadeIn;
+}
+
+#intro {
+    width:30%;
+}
+
+#personal {
+    width:30%;
+}
+
+
+#website-tag {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 #intro-wrapper {
     opacity:0;
     transition: opacity 2000ms linear;
@@ -23,19 +55,6 @@ h1 {
     justify-content:center;
     position:absolute;
     align-items:center;
-    
-    
-}
-
-
-
-
-
-
-
-
-#intro {
-    width:30%;
 }
 
 #personal-wrapper {
@@ -48,9 +67,6 @@ h1 {
     justify-content:center;
     align-items:center;
     z-index:-3;
-}
-#personal {
-    width:30%;
 }
 
 #professional-wrapper {
@@ -65,10 +81,6 @@ h1 {
     z-index:-4;
 }
 
-#professional {
-    width:30%;
-}
-
 #hobbies-wrapper {
     color:white;
     transition: opacity 1000ms linear;
@@ -80,6 +92,11 @@ h1 {
     align-items:center;
     z-index:-5;
 }
+
+#professional {
+    width:30%;
+}
+
 #hobbies {
     width:30%;
 }
@@ -99,32 +116,9 @@ h1 {
     background-color:#2C5364;
 }
 
-#welcome-wrapper {
-    opacity:1;
-    transition: opacity 1000ms linear;
-
-    color:white;
-    font-size:3em;
-    font-weight:300;
-    position:absolute;
-    width:99vw;
-    height:99vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    animation: 2s ease-out 0s 1 fadeIn;
-}
 .fadeInAnimation {
     animation: fadeIn 2s ease-out 0s 1 ;
 }
-
-
-
-
-
-
 
 /* START FLOATING ANIMATION */
 .sliderRight {
@@ -167,15 +161,6 @@ h1 {
     }
 }
 /* END FLOATING ANIMATION */
-
-
-
-
-
-
-
-
-
 /* START ANIMATIONS FOR GOING FORWARD WITH CONTENT */
     /* This moves wrapper from off screen to the center (from the right) */
 .slideLeftFromRight {
@@ -204,10 +189,6 @@ h1 {
     }
 }
 /* END ANIMATIONS FOR GOING FORWARD WITH CONTENT */
-
-
-
-
 /* START ANIMATIONS FOR GOING BACKWARDS WITH CONTENT */
     /* This moves wrapper onto screen from the left to center */
 .slideRightFromLeft {
@@ -235,14 +216,7 @@ h1 {
         transform:translateX(100%)
     }
 }
-
-
-
 /* END ANIMATIONS FOR GOING BACKWARDS WITH CONTENT */
-
-
-
-
 /* TON OF CSS FOR BUTTON */
 
 .bubbly-button {
@@ -326,11 +300,7 @@ h1 {
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
 }
-
-
-
-
-#time-thing-wrapper {
+#soju-text-wrapper {
     
     opacity:1;
     justify-content: center;
@@ -342,7 +312,7 @@ h1 {
 
 }
 
-#time-thing {
+#soju-text {
     transition: opacity 1000ms linear;
     opacity:1;
     justify-content: center;
@@ -353,10 +323,6 @@ h1 {
     height: 99vh;
     animation: 2s ease-out 0s 1 fadeIn;
 }
-
-
-
-
 
 #map {
     position:absolute;
@@ -393,3 +359,27 @@ h1 {
   }
 }
 
+
+
+.soju-button {
+    display:inline-block;
+    padding:0.5em 3em;
+    border:0.16em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-weight:400;
+    color:#000000;
+    text-align:center;
+    transition: all 0.15s;
+}
+.soju-button:hover{
+    color:#000000;
+    border-color:#DDDDDD;
+}
+.soju-button:active{
+    color:#ffffff;
+    background-color:rgb(49, 49, 49);
+    border-color:#202020;
+}

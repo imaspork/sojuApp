@@ -13,11 +13,10 @@
     <title>Find Soju</title>
 </head>
     <body>
-
         <div id="intro-wrapper"> 
             <div id="intro">
                 <h1>Introduction</h1>
-                Hi! This is my revamped site. You can visit <a href="imtylre.com">imtylre.com</a> for a very simple html/css website with responsive UI. This website iteration features Javascript and will force you to interact with the page. There is also an alcohol locator for you!
+                Hi! This is my revamped site. You can visit <a id="website-tag" href="imtylre.com">imtylre.com</a> for a very simple html/css website with responsive UI. This website iteration features Javascript and will force you to interact with the page. There is also an alcohol locator for you!
             </div>
             <div id="img-wrapper-intro-right" class="floating"><img src='arrowRight.svg' alt="Right Arrow" class='sliderRight'></div> 
             
@@ -54,40 +53,22 @@
             
         </div>
 
-        <div id="time-thing-wrapper">
+        <div id="soju-text-wrapper">
             
-            <div id="time-thing">
+            <div id="soju-text">
                 <h1>Need some alcohol?</h1> 
-                Here's an alcohol locator! Click the location button so I can find your location. Next click the Soju button to be redirected to the nearest store that sells Soju.
-                <div style="text-align: center;margin-top: 3%;"><button id="location-button">Location</button>
-                <button id="find-button">Soju</button></div>
+                Here's an alcohol locator! Click the location button so I can find your location. Next click the soju button to be redirected to the nearest store that sells soju.
+                <div style="text-align: center;margin-top: 3%;"><button class="soju-button" id="location-button">Location</button>
+                <button class="soju-button" id="find-button">Soju</button></div>
             </div>
             <div id="map" class="" style = "display:none;"></div>
         </div>
-        
-                
-
-
-
-
         <div id="welcome-wrapper">
             <span>Welcome.</span>
             <button id="welcome-button">Enter</button>
             
         </div>
-        
-
-
-
-
-
     </body>
-
-
-
-
-    
     <script type="text/javascript" src="functions.js"></script>
     <script type="text/javascript" src="map.js"></script>
-    
 </html>

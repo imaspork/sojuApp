@@ -217,6 +217,7 @@ h1 {
     }
 }
 /* END ANIMATIONS FOR GOING BACKWARDS WITH CONTENT */
+
 /* TON OF CSS FOR BUTTON */
 
 .bubbly-button {
@@ -300,7 +301,11 @@ h1 {
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
 }
-#soju-text-wrapper {
+
+
+
+
+#soju-wrapper {
     
     opacity:1;
     justify-content: center;
@@ -312,7 +317,7 @@ h1 {
 
 }
 
-#soju-text {
+#soju-locator {
     transition: opacity 1000ms linear;
     opacity:1;
     justify-content: center;
@@ -323,6 +328,10 @@ h1 {
     height: 99vh;
     animation: 2s ease-out 0s 1 fadeIn;
 }
+
+
+
+
 
 #map {
     position:absolute;
@@ -359,27 +368,27 @@ h1 {
   }
 }
 
-
-
-.soju-button {
+#location-button, #find-button {
+    background: #1b4a5e;
     display:inline-block;
     padding:0.5em 3em;
-    border:0.16em solid #FFFFFF;
+    border:0.16em solid #5f6362;
     margin:0 0.3em 0.3em 0;
     box-sizing: border-box;
     text-decoration:none;
     text-transform:uppercase;
     font-weight:400;
-    color:#000000;
+    color:#0c0c0c;
     text-align:center;
     transition: all 0.15s;
+    cursor:pointer;
+    border-radius: 25px;
 }
-.soju-button:hover{
+#location-button:hover, #find-button:hover{
+    border-color:#555555;
+}
+#location-button:active, #find-button:active{
     color:#000000;
-    border-color:#DDDDDD;
-}
-.soju-button:active{
-    color:#ffffff;
-    background-color:rgb(49, 49, 49);
-    border-color:#202020;
+    background-color: rgb(59, 59, 59);
+    border-color:rgb(43, 43, 43);
 }

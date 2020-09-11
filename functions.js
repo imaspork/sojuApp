@@ -155,9 +155,9 @@ document.querySelector('#button-project').addEventListener('click', function(e) 
     
     setTimeout(function () {
         hobbiesWrapper.style.display = "none";
-        document.querySelector('#soju-text-wrapper').style.display = "flex"
-        document.querySelector('#soju-text-wrapper').style.opacity = '1'
-        document.querySelector('#soju-text-wrapper').classList.add('fadeInAnimation')
+        document.querySelector('#soju-wrapper').style.display = "flex"
+        document.querySelector('#soju-wrapper').style.opacity = '1'
+        document.querySelector('#soju-wrapper').classList.add('fadeInAnimation')
     }, 1030);
     
 })
@@ -201,7 +201,7 @@ document.querySelector('#find-button').addEventListener('click', function () {
         })
         .catch(err => console.warn(err.message));
 
-    document.querySelector('#soju-text').style.opacity = "0";
+    document.querySelector('#soju-locator').style.opacity = "0";
     
     setTimeout(function () {
         

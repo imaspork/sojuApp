@@ -15,7 +15,7 @@ function initMap() {
         zoom: 15
     });
     const request = {
-        query: "soju liquor store",
+        query: "soju liquor store grocery",
         fields: ["name", "geometry"]
     };
     service = new google.maps.places.PlacesService(map);
@@ -27,15 +27,24 @@ function initMap() {
             map.setCenter(results[0].geometry.location);
         }
     });
+
+    
 }
 
 function createMarker(place) {
     const marker = new google.maps.Marker({
         map,
-        position: place.geometry.location
+        position: place.geometry.location,
+        title: place.name
     });
+    // window.requestedLocation = place.name;
+    // var sojuLocation = document.getElementById('soju-location');
+    // sojuLocation.innerHTML += place.name;
+
     google.maps.event.addListener(marker, "click", () => {
         infowindow.setContent(place.name);
         infowindow.open(map);
     });
 }
+
+

@@ -15,27 +15,27 @@
     <body>
 
         <div id="intro-wrapper"> 
-            <div id="intro">
+            <div id="intro" class="content-width">
                 <h1>Introduction</h1>
-                Hi! This is my revamped site. You can visit <a id="website-tag" href="imtylre.com">imtylre.com</a> for a very simple html/css website with responsive UI. This website iteration features Javascript and will force you to interact with the page. There is also an alcohol locator for you!
+                Hi! This is my revamped site. You can visit <a id="website-tag" href="imtylre.com">imtylre.com</a> for a very simple html/css website with responsive UI. This website iteration features Javascript and will force you to interact with the page. There is also an alcohol locator for you if you keep scrolling right.
             </div>
             <div id="img-wrapper-intro-right" class="floating"><img src='arrowRight.svg' alt="Right Arrow" class='sliderRight'></div> 
             
         </div>
         
-        <div id="personal-wrapper">
+        <div id="personal-wrapper" class="wrapper-styling">
             <div id="img-wrapper-personal-left"><img src='arrowLeft.svg' alt="Left Arrow" class='sliderLeft'></div>
-            <div id="personal">
+            <div id="personal" class="content-width">
                 <h1>Personal</h1>
-                I have been gaming for my the majority of my life. I have as well have a strong passion for cars, namely BMW. I currently drive a 2006 manual 325i. I enjoy memes and watching anime/netflix to relax
+                I have been gaming for my the majority of my life. I have as well have a strong passion for cars, namely BMW. I currently drive a 2006 manual 325i. I enjoy memes and watching anime/netflix to relax.
             </div>
             <div id="img-wrapper-personal-right" class="floating"><img src='arrowRight.svg' alt="Right Arrow" class='sliderRight'></div>
         
         </div>
 
-        <div id="professional-wrapper">
+        <div id="professional-wrapper" class="wrapper-styling">
             <div id="img-wrapper-professional-left" class="floating"><img src='arrowLeft.svg' alt="Left Arrow" class='sliderLeft'></div>
-            <div id="professional">
+            <div id="professional" class="content-width">
                 <h1>Professional</h1>
                 I'm currently a student at the University of California Riverside. I'm set to graduate in Fall 2020 with a Film and Media degree. I have prior work experience as a Web Content Specialist at <a style='color:#FEDF00;' href='https:CORSAIR.com' rel="noopener" target='_blank'>Corsair</a> as an intern. I as well have experience managing social media for a photography studio. I have aspirations to work as a web developer and I have been driving myself rigorously in that direction. I have taken some computer science courses such as CS010, but I am mostly self taught. I first learnt HTML and CSS and practiced with those. Then I made this website as a learning project for JavaScript and server hosting.
             </div>
@@ -43,9 +43,9 @@
         </div>
 
         
-        <div id="hobbies-wrapper">
+        <div id="hobbies-wrapper" class="wrapper-styling">
             <div id="img-wrapper-hobbies-left" class="floating"><img src='arrowLeft.svg' alt="Left Arrow" class='sliderLeft'></div>
-            <div id="hobbies">
+            <div id="hobbies" class="content-width">
                 <h1>Hobbies</h1>
                 My main hobbies are gaming and cars. I primarily play FPS games, but will play anything with friends just to have a good time. I have a strong interest in cars as mentioned earlier. I also enjoy photography and videography. I like dogs like most people. I have a 4 year old puppy that never runs out of energy no matter how much I exercise her.
                 <div style="text-align:center;"><button id="button-project" class="btn-grad bubbly-button">Locate Soju</button></div>
@@ -53,40 +53,26 @@
             <div id="img-wrapper-hobbies-right" class="floating"><img src='arrowRight.svg' alt="Right Arrow" class='sliderRight'></div>
             
         </div>
-
+        
         <div id="soju-wrapper">
             
             <div id="soju-locator">
                 <h1>Need some alcohol?</h1> 
                 Here's an alcohol locator! Click the location button so I can find your location. Next click the Soju button to be redirected to the nearest store that sells Soju.
-                <div style="text-align: center;margin-top: 3%;"><button id="location-button">Location</button>
-                <button id="find-button">Soju</button></div>
+                <div style="text-align: center;margin-top: 3%;display:flex;flex-wrap:wrap;"><button id="location-button" class="location-button-styling">Location</button>
+                <button id="find-button" class="location-button-styling">Soju</button></div>
             </div>
             <div id="map" class="" style = "display:none;"></div>
         </div>
-        
-                
-
-
-
 
         <div id="welcome-wrapper">
             <span>Welcome.</span>
             <button id="welcome-button">Enter</button>
             
         </div>
-        
-
-
-
-
 
     </body>
 
-
-
-
-    
     <script type="text/javascript" src="functions.js"></script>
     <script type="text/javascript" src="map.js"></script>
     

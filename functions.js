@@ -158,6 +158,7 @@ document.querySelector('#button-project').addEventListener('click', function(e) 
         document.querySelector('#soju-wrapper').style.display = "flex"
         document.querySelector('#soju-wrapper').style.opacity = '1'
         document.querySelector('#soju-wrapper').classList.add('fadeInAnimation')
+        
     }, 1030);
     
 })
@@ -203,12 +204,14 @@ document.querySelector('#find-button').addEventListener('click', function () {
 
     document.querySelector('#soju-locator').style.opacity = "0";
     
+    
     setTimeout(function () {
         
         document.querySelector('#map').classList.add("blurtime")
         document.querySelector('#map').style.opacity = "1"
         document.querySelector('#map').style.display = "flex";
     }, 1030);  
+    
     
     
 })

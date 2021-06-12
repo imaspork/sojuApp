@@ -1,13 +1,13 @@
-// defined vars for shorthand
-var welcomeWrapper = document.querySelector('#welcome-wrapper')
-var introWrapper = document.querySelector('#intro-wrapper')
-var intro = document.querySelector('#intro')
-var imgWrapper = document.querySelector('#img-wrapper-intro-right')
-var personalWrapper = document.querySelector('#personal-wrapper')
-var professionalWrapper = document.querySelector('#professional-wrapper')
-var professional = document.querySelector('#professional')
-var hobbies = document.querySelector('#hobbies')
-var hobbiesWrapper = document.querySelector('#hobbies-wrapper')
+// defined for shorthand
+const welcomeWrapper = document.querySelector('#welcome-wrapper')
+const introWrapper = document.querySelector('#intro-wrapper')
+const intro = document.querySelector('#intro')
+const imgWrapper = document.querySelector('#img-wrapper-intro-right')
+const personalWrapper = document.querySelector('#personal-wrapper')
+const professionalWrapper = document.querySelector('#professional-wrapper')
+const professional = document.querySelector('#professional')
+const hobbies = document.querySelector('#hobbies')
+const hobbiesWrapper = document.querySelector('#hobbies-wrapper')
 // welcome button removal function and content load
 
 document.querySelector('#welcome-button').addEventListener('click', function(e) {
@@ -166,7 +166,7 @@ document.querySelector('#button-project').addEventListener('click', function(e) 
 
 
 // get geolocation
-const key = "AIzaSyBGzkyY05335UxV-zAgXhldt7LrPMEg164"; // put in another file later on
+const key = "AIzaSyBGzkyY05335UxV-zAgXhldt7LrPMEg164"; // outdated key for showcase purposed
 
 
 document.querySelector('#location-button').addEventListener('click', function(){
@@ -226,7 +226,7 @@ document.querySelector('#find-button').addEventListener('click', function () {
     
 
 
-var animateButton = function (e) {
+const animateButton = function (e) {
 
     e.preventDefault;
     //reset animation
@@ -238,7 +238,7 @@ var animateButton = function (e) {
     }, 700);
 };
 
-var bubblyButtons = document.getElementsByClassName("bubbly-button");
+const bubblyButtons = document.getElementsByClassName("bubbly-button");
 
 for (var i = 0; i < bubblyButtons.length; i++) {
     bubblyButtons[i].addEventListener('click', animateButton, false);

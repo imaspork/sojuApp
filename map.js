@@ -37,9 +37,6 @@ function createMarker(place) {
         position: place.geometry.location,
         title: place.name
     });
-    // window.requestedLocation = place.name;
-    // var sojuLocation = document.getElementById('soju-location');
-    // sojuLocation.innerHTML += place.name;
 
     google.maps.event.addListener(marker, "click", () => {
         infowindow.setContent(place.name);
